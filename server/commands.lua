@@ -90,7 +90,7 @@ if Config.EnableAdvertisementCommand then
                     args = { playerName, message, time }
                 })
 
-                RSGcore.Functions.Notify("Advertisement successfully made for "..Config.AdvertisementPrice..'€', success, 5000)
+                RSGcore.Functions.Notify("Advertisement successfully made for "..Config.AdvertisementPrice..'$', success, 5000)
 
                 local time = Config.AdvertisementCooldown * 60
                 local pastTime = 0
