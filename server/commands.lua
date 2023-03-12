@@ -228,9 +228,14 @@ RegisterCommand('gossip', function(source, args, rawCommand)
 end)
 
 RegisterCommand('ooc', function(source, args, rawCommand)
+    
+    local Player = RSGcore.Functions.GetPlayer(source)
     local message = table.concat(args, ' ')
     local time = os.date(Config.DateFormat)
-    local playerName = GetPlayerName(source)
+    local PlayerData = Player.PlayerData
+    local firstname = PlayerData.charinfo.firstname
+    local lastname = PlayerData.charinfo.lastname
+    local playerName = firstname .. ' ' .. lastname
     TriggerClientEvent('chat:addMessage', -1, {
         template = '<div class="chat-message ooc"><i class="fas fa-comment"></i> <b><span style="color: #ffc107">[OOC] {0}</span>&nbsp;<span style="font-size: 14px; color: #e1e1e1;">{1}</span></b><div style="margin-top: 5px; font-weight: 300;">{2}</div></div>',
         args = {playerName, time, message}
