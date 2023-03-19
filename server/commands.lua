@@ -240,6 +240,7 @@ RegisterCommand('ooc', function(source, args, rawCommand)
         template = '<div class="chat-message ooc"><i class="fas fa-comment"></i> <b><span style="color: #ffc107">[OOC] {0}</span>&nbsp;<span style="font-size: 14px; color: #e1e1e1;">{1}</span></b><div style="margin-top: 5px; font-weight: 300;">{2}</div></div>',
         args = {playerName, time, message}
     })
+    TriggerEvent('rsg-log:server:CreateLog', 'ooc', 'OOC', 'white', '**' .. GetPlayerName(source) .. '** (CitizenID: ' .. Player.PlayerData.citizenid .. ' | ID: ' .. source .. ') **Message:** ' .. message, false)
 end)
 
 if Config.EnableWhisperCommand then
