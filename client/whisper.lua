@@ -21,3 +21,7 @@ AddEventHandler('chat:whisper', function(id, name, message, time)
         end
     end)
 end)
+
+RegisterNetEvent('ip-chat:client:SendReport', function(name, src, msg)
+    TriggerServerEvent('ip-chat:server:SendReport', name, src, msg)
+end)
