@@ -1,4 +1,4 @@
-local RSGcore = exports['rsg-core']:GetCoreObject()
+local RSGCore = exports['rsg-core']:GetCoreObject()
 
 local canAdvertise = true
 
