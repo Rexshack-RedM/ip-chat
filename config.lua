@@ -37,7 +37,7 @@ Config.ClearEveryonesChatCommand = 'clearall'
 
 Config.EnableStaffOnlyCommand = true
 
-Config.StaffOnlyCommand = 'admin'
+Config.StaffOnlyCommand = 'adminchat'
 
 --------------------------------
 -- [Advertisements]
